@@ -22,22 +22,20 @@ public class Jogo {
 	}
 	
 	public static void iniciarJogo() {
-		while (!verificarVitoria()) {
+		while (true) {
 			t1.mostrar(j1.getNome());
 			t2.mostrar(j2.getNome());
 			
 			j1.atirar(t2);
+			if (verificarVitoria(j1)) break;
 			j2.atirar(t1);
+			if (verificarVitoria(j2)) break;
 		}
 	}
 
-	public static boolean verificarVitoria() {
-		if (j1.getPontuacao() == CONT_NAVIOS) {
-			System.out.println(j1.getNome() + " venceu o jogo!!");
-			return true;
-		}
-		else if (j2.getPontuacao() == CONT_NAVIOS) {
-			System.out.println(j2.getNome() + " venceu o jogo!!");
+	public static boolean verificarVitoria(Jogador j) {
+		if (j.getPontuacao() >= CONT_NAVIOS) {
+			System.out.println(j.getNome() + " venceu o jogo!!");
 			return true;
 		}
 		return false;
