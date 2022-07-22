@@ -1,7 +1,7 @@
 package com.example.batalhanaval.main;
 
 import com.example.batalhanaval.exceptions.CelulaInvalidaException;
-import com.example.batalhanaval.exceptions.CelulaJaDescobertaException;
+import com.example.batalhanaval.exceptions.TiroRepetidoException;
 import com.example.batalhanaval.exceptions.CelulaJaTemNavioException;
 import com.example.batalhanaval.utils.InputHandler;
 
@@ -55,7 +55,7 @@ public class Usuario extends Jogador {
 			} catch (CelulaInvalidaException e) {
 				System.out.println("Essa posição é inválida!");
 				continue;
-			} catch (CelulaJaDescobertaException e) {
+			} catch (TiroRepetidoException e) {
 				System.out.println("Você já atirou nessa posição!");
 				continue;
 			}

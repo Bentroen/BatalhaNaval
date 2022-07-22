@@ -1,7 +1,7 @@
 package com.example.batalhanaval.main;
 
 import com.example.batalhanaval.exceptions.CelulaInvalidaException;
-import com.example.batalhanaval.exceptions.CelulaJaDescobertaException;
+import com.example.batalhanaval.exceptions.TiroRepetidoException;
 import com.example.batalhanaval.exceptions.CelulaJaTemNavioException;
 
 public class Computador extends Jogador {
@@ -48,7 +48,7 @@ public class Computador extends Jogador {
 			} catch (CelulaInvalidaException e) {
 				e.printStackTrace();
 				continue;
-			} catch (CelulaJaDescobertaException e) {
+			} catch (TiroRepetidoException e) {
 				continue;
 			}
 			

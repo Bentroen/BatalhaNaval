@@ -2,7 +2,7 @@ package com.example.batalhanaval.main;
 
 import com.example.batalhanaval.enums.TipoCelula;
 import com.example.batalhanaval.exceptions.CelulaInvalidaException;
-import com.example.batalhanaval.exceptions.CelulaJaDescobertaException;
+import com.example.batalhanaval.exceptions.TiroRepetidoException;
 import com.example.batalhanaval.exceptions.CelulaJaTemNavioException;
 
 public class Tabuleiro {
@@ -47,7 +47,7 @@ public class Tabuleiro {
 		celulas[i][j].setTipo(TipoCelula.NAVIO);
 	}
 	
-	public boolean marcarTiro(Coordenada coord) throws CelulaJaDescobertaException, CelulaInvalidaException {
+	public boolean marcarTiro(Coordenada coord) throws TiroRepetidoException, CelulaInvalidaException {
 		int i = coord.getLinha();
 		int j = coord.getColuna();
 		
@@ -57,7 +57,7 @@ public class Tabuleiro {
 		Celula celula = celulas[i][j];
 		
 		if (celula.getDescoberta()) {
-			throw new CelulaJaDescobertaException(String.format("%d, %d", i, j));
+			throw new TiroRepetidoException(String.format("%d, %d", i, j));
 		}
 		celula.setDescoberta(true);
 		
