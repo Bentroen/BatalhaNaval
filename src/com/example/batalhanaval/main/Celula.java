@@ -25,17 +25,17 @@ public class Celula {
 	
 	public String mostrar() {
 		if (this.descoberta) {
-			return this.tipo == TipoCelula.NAVIO ? "#" : "X";
+			return this.tipo == TipoCelula.NAVIO ? "❌" : "🟥";
 		} else {
-			return this.tipo == TipoCelula.NAVIO ? "N" : "-";
+			return this.tipo == TipoCelula.NAVIO ? "⛵" : "🟦";
 		}
 	}
 	
 	public String mostrarOculto() {
 		if (this.descoberta) {
-			return this.tipo == TipoCelula.NAVIO ? "X" : "-";
+			return this.tipo == TipoCelula.NAVIO ? "❌" : "🟦";
 		} else {
-			return "?";
+			return "🔳";
 		}
 		
 	}
