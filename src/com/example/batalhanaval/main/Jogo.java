@@ -23,8 +23,8 @@ public class Jogo {
 	
 	public static void iniciarJogo() {
 		while (true) {
-			t1.mostrar(j1.getNome());
-			t2.mostrar(j2.getNome());
+			t1.mostrar(j1.getNome(), false);
+			t2.mostrar(j2.getNome(), true);
 			
 			j1.atirar(t2);
 			if (verificarVitoria(j1)) break;

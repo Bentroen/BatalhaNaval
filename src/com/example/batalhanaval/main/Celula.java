@@ -23,11 +23,19 @@ public class Celula {
 		this.tipo = tipo;
 	}
 	
-	public String toString() {
-		if (this.descoberta) {
-			return "X";
+	public String mostrar(boolean oculto) {
+		if (oculto) {
+			if (this.descoberta) {
+				return this.tipo == TipoCelula.NAVIO ? "X" : "-";
+			} else {
+				return "?";
+			}
 		} else {
-			return this.tipo == TipoCelula.NAVIO ? "N" : "-";
+			if (this.descoberta) {
+				return this.tipo == TipoCelula.NAVIO ? "#" : "X";
+			} else {
+				return this.tipo == TipoCelula.NAVIO ? "N" : "-";
+			}
 		}
 	}
 	

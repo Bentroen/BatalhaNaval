@@ -17,7 +17,7 @@ public class Usuario extends Jogador {
 		
 		while (naviosRestantes > 0) {
 			
-			t.mostrar(getNome());
+			t.mostrar(getNome(), false);
 			System.out.println(String.format("Posicione seus navios (faltando %d)", naviosRestantes));
 			
 			Coordenada coord = InputHandler.getCoordenada("Insira uma coordenada: ");

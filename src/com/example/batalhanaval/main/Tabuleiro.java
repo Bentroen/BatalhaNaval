@@ -73,7 +73,7 @@ public class Tabuleiro {
 		
 	}
 	
-	public void mostrar(String nome) {
+	public void mostrar(String nome, boolean oculto) {
 		
 		// Título
 		System.out.println();
@@ -93,7 +93,7 @@ public class Tabuleiro {
 		for (int i = 0; i < tamanho; i++) {
 			System.out.print(String.valueOf(i) + " ");
 			for (int j = 0; j < tamanho; j++) {
-				System.out.print(celulas[j][i] + " ");
+					System.out.print(celulas[j][i].mostrar(oculto) + " ");
 			}
 			System.out.println();
 		}
