@@ -3,7 +3,7 @@ package com.example.batalhanaval.main;
 public class Jogo {
 	
 	public static final int TAMANHO_TABULEIRO = 10;
-	public static final int CONT_NAVIOS = 3;
+	public static final int CONT_NAVIOS = 10;
 	
 	private static Jogador j1 = new Usuario();
 	private static Jogador j2 = new Computador();
