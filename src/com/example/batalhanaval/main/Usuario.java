@@ -56,7 +56,7 @@ public class Usuario extends Jogador {
 				System.out.println("Essa posição é inválida!");
 				continue;
 			} catch (CelulaJaDescobertaException e) {
-				System.out.println("Você já colocou um navio nessa posição!");
+				System.out.println("Você já atirou nessa posição!");
 				continue;
 			}
 			
