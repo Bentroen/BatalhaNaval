@@ -33,10 +33,6 @@ public class Tabuleiro {
 		}
 	}
 	
-	public void validarCoordenada(Coordenada coord) {
-	
-	}
-	
 	public void posicionarNavio(Coordenada coord) throws CelulaJaTemNavioException, CelulaInvalidaException {
 		int i = coord.getLinha();
 		int j = coord.getColuna();

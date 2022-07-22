@@ -39,10 +39,4 @@ public class Celula {
 		}
 	}
 	
-	// 	public String toString() {
-	//if (this.descoberta) {
-	//	return "⬛";
-	//} else {
-	//	return this.tipo == TipoCelula.NAVIO ? "🚢" : "🟦";
-	//}
 }
