@@ -89,7 +89,11 @@ public class Tabuleiro {
 		for (int i = 0; i < tamanho; i++) {
 			System.out.print(String.valueOf(i) + " ");
 			for (int j = 0; j < tamanho; j++) {
-					System.out.print(celulas[j][i].mostrar(oculto) + " ");
+					if (oculto) {
+						System.out.print(celulas[j][i].mostrarOculto() + " ");
+					} else {
+						System.out.print(celulas[j][i].mostrar() + " ");
+					}
 			}
 			System.out.println();
 		}
